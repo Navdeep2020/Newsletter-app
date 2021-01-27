@@ -54,14 +54,14 @@ app.post("/",function(req,res){
       }
      
 
-     //response.on("data",function(data)
-     //{
-       // console.log(JSON.parse(data));
-     //});
+     response.on("data",function(data)
+     {
+        console.log(JSON.parse(data));
+     });
    });
 
-   //request.write(jsonData);
-   //request.end();
+   request.write(jsonData);
+   request.end();
 });
 
  app.post("/failure", function(res,req){
